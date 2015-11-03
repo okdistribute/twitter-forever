@@ -1,7 +1,7 @@
 var util = require('util')
 var Twitter = require('twitter')
 var events = require('events')
-var debug = require('debug')('tweet-search')
+var debug = require('debug')('twitter-forever')
 
 module.exports = Forever
 
