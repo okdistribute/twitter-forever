@@ -20,10 +20,10 @@ searcher.on('data', function (tweets) {
 
 ## API
 
-### `forever = Forever(client, opts)`
+### `var searcher = forever(client, opts)`
 
 ```opts```: object. Can take anything that the twitter api takes - `q`,`since`,`until`, etc...
 
-### `forever.on('data', cb)`
+### `searcher.on('data', cb)`
 
 `cb` is called with a list of tweets and their metadata.
