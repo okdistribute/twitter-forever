@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "Search twitter forever given a query",
   "main": "index.js",
+  "bin": {
+    "twitter-forever": "cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
