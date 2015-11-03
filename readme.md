@@ -2,7 +2,25 @@
 
 Search twitter forever for a given query. Handles rate limiting.
 
-[![NPM](https://nodei.co/npm/twitter-forever.png)](https://nodei.co/npm/twitter-forever/)
+## CLI Example
+
+Install using npm
+
+```
+npm install -g twitter-forever
+```
+
+Can take any number of arguments in the form `--name value` where Twitter defines them on their documentation at https://dev.twitter.com/rest/reference/get/search/tweets
+
+```
+twitter-forever "my search query" --until 10/22/2012
+```
+
+## Node.js Example
+
+```
+npm install twitter-forever
+```
 
 ```js
 var forever = require('twitter-forever')
@@ -27,3 +45,7 @@ searcher.on('data', function (tweets) {
 ### `searcher.on('data', cb)`
 
 `cb` is called with a list of tweets and their metadata.
+
+### `forever.on('error', cb)`
+
+`cb` is called with an error.
