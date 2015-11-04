@@ -17,13 +17,18 @@ util.inherits(Forever, events.EventEmitter)
 
 Forever.prototype.doit = function (opts) {
   var self = this
-  setTimeout(function () {
+  self.timeout = setTimeout(function () {
     self.search(opts, function (err, since_id) {
       if (err) console.error(err)
       opts.since_id = since_id
       self.doit(opts)
     })
   }, 5000)
+}
+
+Forever.prototype.destroy = function () {
+  var self = this
+  clearTimeout(self.timeout)
 }
 
 Forever.prototype.search = function (opts, cb) {
