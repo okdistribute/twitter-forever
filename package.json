@@ -1,6 +1,6 @@
 {
   "name": "twitter-forever",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Search twitter forever given a query",
   "main": "index.js",
   "bin": {
