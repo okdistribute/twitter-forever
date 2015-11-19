@@ -37,7 +37,7 @@ Forever.prototype.search = function (opts, cb) {
   opts.result_type = 'recent'
   self.client.get('search/tweets', opts, function (err, data, response) {
     if (err) {
-      if (err[0].code === 88) {
+      if (err[0] && err[0].code === 88) {
         self.client.get('application/rate_limit_status', {resources: 'search'}, function (err, data, resp) {
           if (err) self.emit('error', err)
           var reset = data.resources.search['/search/tweets'].reset
